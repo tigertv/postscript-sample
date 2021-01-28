@@ -1,0 +1,42 @@
+%!PS
+/S {moveto show} def
+/Palatino-Roman 20 selectfont
+0 750 moveto
+(Text1!) show
+/Palatino-Roman 28 selectfont
+(Text2!) 0 700 moveto show
+/Palatino-Roman 33 selectfont
+/num 19 def
+(Text3!) 0 650 S
+/incrementNum {/num num 1 add def} def % comment
+/mulNum {/num 2 1 roll num mul def} def % comment
+incrementNum
+/intToString {30 string cvs} def % comment
+num intToString show
+/num rand num mod stack def
+0 600 moveto
+num intToString show
+0 550 moveto
+/num rand 100 mod stack def
+num intToString show
+% rand 16#7fffffff div 100 mul cvi show
+0 500 moveto
+11 mulNum
+num intToString show
+0 450 moveto
+(333) show
+0 400 moveto
+1655 intToString show
+0 350 moveto
+4 {
+	num intToString show
+	( ) show
+	incrementNum
+} repeat
+0 300 moveto
+0 1 3 {
+	(0 ) show
+} for
+/mmm 36#1z def % base 36 number
+mmm intToString show
+showpage
